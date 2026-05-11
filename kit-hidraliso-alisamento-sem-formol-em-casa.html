@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kit Hidraliso — Alisamento Sem Formol em Casa | Resultado Profissional</title>
+  <meta name="description" content="Conheça o Hidraliso: alisamento sem formol, sem cheiro e sem salão. Cabelo liso e hidratado na 1ª aplicação. Para todo tipo de cabelo. Saiba mais." />
+  <meta name="keywords" content="alisamento sem formol, kit alisante em casa, progressiva caseira, cabelo liso hidratado" />
+  <meta property="og:title" content="Kit Hidraliso — Alisamento Profissional em Casa" />
+  <meta property="og:description" content="Liso em minutos, sem formol, sem cheiro, sem salão. Resultado na primeira aplicação." />
+  <meta property="og:image" content="https://hidraliso.com.br/wp-content/uploads/2025/03/Modelos-Home-1-1024x714.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="https://hidraliso.com.br/wp-content/uploads/2025/03/Produtos-Hidraliso-1.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --rose: #C8506A;
+      --rose-light: #F5D5DC;
+      --rose-dark: #9E3050;
+      --cream: #FDF8F5;
+      --warm: #F7EDE6;
+      --text: #2C1A1E;
+      --muted: #7A5A62;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    /* Cookie Banner */
+    #cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+      background: #2C1A1E; color: #fff;
+      padding: 16px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+      font-size: 13px; font-family: 'DM Sans', sans-serif;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+    #cookie-banner.show { transform: translateY(0); }
+    #cookie-accept {
+      background: var(--rose); color: #fff;
+      border: none; border-radius: 6px;
+      padding: 8px 20px; cursor: pointer; font-size: 13px; font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Hero */
+    .hero-bg {
+      background: linear-gradient(135deg, #2C1A1E 0%, #6B2737 60%, #C8506A 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Pulse CTA */
+    @keyframes pulse-rose {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(200,80,106,0.4); }
+      50% { box-shadow: 0 0 0 14px rgba(200,80,106,0); }
+    }
+    .cta-pulse { animation: pulse-rose 2.2s infinite; }
+
+    /* Fade in up */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.7s ease both; }
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
+    .delay-3 { animation-delay: 0.45s; }
+
+    /* Benefit card hover */
+    .benefit-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(200,80,106,0.12);
+    }
+
+    /* Sticky bar */
+    .sticky-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 998;
+      background: rgba(44,26,30,0.96);
+      backdrop-filter: blur(8px);
+      transform: translateY(-100%);
+      transition: transform 0.35s ease;
+      padding: 10px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .sticky-bar.visible { transform: translateY(0); }
+
+    /* Step number */
+    .step-num {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--rose);
+      color: #fff; font-weight: 700; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* Divider line */
+    .divider { width: 60px; height: 3px; background: var(--rose); border-radius: 2px; }
+
+    /* Guarantee badge */
+    .guarantee {
+      background: linear-gradient(135deg, #1a3a1a, #2d6a2d);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+    }
+
+    @media (max-width: 640px) {
+      .hero-title { font-size: 2rem; line-height: 1.2; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" role="banner" aria-label="Aviso de cookies">
+  <span>🍪 Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="#" style="color:var(--rose);text-decoration:underline;">Política de Privacidade</a>.</span>
+  <button id="cookie-accept">Aceitar</button>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <span style="color:#F5D5DC; font-family:'Playfair Display',serif; font-size:1rem; font-weight:600;">Kit Hidraliso</span>
+  <a href="https://app.monetizze.com.br/r/AAU18368950" target="_blank" rel="noopener"
+     class="cta-pulse"
+     style="background:var(--rose);color:#fff;padding:9px 22px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;">
+    Ver Kit Completo →
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="hero-bg py-20 px-5 text-white text-center" style="min-height:90vh;display:flex;align-items:center;">
+  <div class="max-w-3xl mx-auto w-full relative z-10">
+    <div class="fade-up" style="display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:6px 18px;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#F5D5DC;margin-bottom:20px;">
+      Sem Formol · Sem Salão · Sem Cheiro
+    </div>
+    <h1 class="hero-title fade-up delay-1" style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;line-height:1.15;margin-bottom:20px;">
+      Cabelo Liso e Hidratado<br/>
+      <span style="color:#F5A0B5;">Na Primeira Aplicação</span>
+    </h1>
+    <p class="fade-up delay-2" style="font-size:1.1rem;color:rgba(255,255,255,0.82);max-width:520px;margin:0 auto 32px;line-height:1.7;">
+      Descubra o kit que está transformando a rotina de cuidados capilares de mulheres em todo o Brasil — sem precisar ir ao salão.
+    </p>
+    <div class="fade-up delay-3" style="display:flex;flex-direction:column;align-items:center;gap:14px;">
+      <a href="https://app.monetizze.com.br/r/AAU18368950" target="_blank" rel="noopener"
+         class="cta-pulse"
+         style="background:var(--rose);color:#fff;padding:16px 40px;border-radius:12px;font-size:1rem;font-weight:700;text-decoration:none;display:inline-block;">
+        Conhecer o Kit Hidraliso →
+      </a>
+      <span style="font-size:12px;color:rgba(255,255,255,0.5);">Resultado visível · Entrega rápida · Garantia inclusa</span>
+    </div>
+    <div style="margin-top:48px;">
+      <img src="https://hidraliso.com.br/wp-content/uploads/2025/03/Modelos-Home-1-1024x714.png"
+           alt="Resultado Hidraliso - cabelo liso e hidratado"
+           loading="lazy"
+           style="max-width:100%;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.4);" />
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div style="background:var(--rose-dark);color:#fff;padding:14px 20px;text-align:center;">
+  <div style="max-width:800px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:24px;font-size:13px;font-weight:500;">
+    <span>✅ Sem Formol</span>
+    <span>✅ Sem Ardência</span>
+    <span>✅ Para Todo Tipo de Cabelo</span>
+    <span>✅ Garantia Inclusa</span>
+    <span>✅ Pagamento Seguro</span>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section style="background:var(--warm);padding:72px 20px;">
+  <div style="max-width:720px;margin:0 auto;text-align:center;">
+    <div class="divider" style="margin:0 auto 20px;"></div>
+    <h2 style="font-size:2rem;font-weight:700;margin-bottom:16px;color:var(--text);">
+      Você se identifica com algum desses problemas?
+    </h2>
+    <p style="color:var(--muted);margin-bottom:40px;line-height:1.7;">Muitas mulheres enfrentam desafios diários com os cabelos — e gastar no salão todo mês nem sempre é viável.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;text-align:left;">
+      <!-- Pain cards -->
+      <div style="background:#fff;border-left:4px solid var(--rose);border-radius:10px;padding:20px 22px;">
+        <div style="font-size:1.5rem;margin-bottom:8px;">😩</div>
+        <strong>Cabelo arrepiado e sem controle</strong>
+        <p style="color:var(--muted);font-size:14px;margin-top:6px;line-height:1.6;">Aquela sensação de que nada funciona para manter o fio no lugar, mesmo depois de gastar muito em produtos.</p>
+      </div>
+      <div style="background:#fff;border-left:4px solid var(--rose);border-radius:10px;padding:20px 22px;">
+        <div style="font-size:1.5rem;margin-bottom:8px;">💸</div>
+        <strong>Salão todo mês? Caro demais</strong>
+        <p style="color:var(--muted);font-size:14px;margin-top:6px;line-height:1.6;">Progressiva, escova, hidratação... a conta no salão não para de crescer e o resultado dura pouco.</p>
+      </div>
+      <div style="background:#fff;border-left:4px solid var(--rose);border-radius:10px;padding:20px 22px;">
+        <div style="font-size:1.5rem;margin-bottom:8px;">⚗️</div>
+        <strong>Medo de química no cabelo</strong>
+        <p style="color:var(--muted);font-size:14px;margin-top:6px;line-height:1.6;">Formol, cheiro forte, ardência... muitas mulheres evitam o alisamento justamente pelos riscos das fórmulas convencionais.</p>
+      </div>
+      <div style="background:#fff;border-left:4px solid var(--rose);border-radius:10px;padding:20px 22px;">
+        <div style="font-size:1.5rem;margin-bottom:8px;">⏰</div>
+        <strong>Sem tempo para o salão</strong>
+        <p style="color:var(--muted);font-size:14px;margin-top:6px;line-height:1.6;">Agenda cheia, fila de espera e horas sentada — a rotina moderna não deixa espaço para idas frequentes ao salão.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTO -->
+<section style="background:var(--cream);padding:72px 20px;">
+  <div style="max-width:960px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="divider" style="margin:0 auto 20px;"></div>
+      <h2 style="font-size:2rem;font-weight:700;color:var(--text);">Conheça o Kit Hidraliso</h2>
+      <p style="color:var(--muted);margin-top:12px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7;">Uma solução desenvolvida para quem quer resultado de salão com a praticidade de casa — sem abrir mão da saúde dos fios.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:40px;justify-content:center;">
+      <img src="https://hidraliso.com.br/wp-content/uploads/2025/03/Produtos-Hidraliso-1.png"
+           alt="Produtos Kit Hidraliso"
+           loading="lazy"
+           style="max-width:380px;width:100%;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,0.1);" />
+      <div style="flex:1;min-width:280px;">
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:16px;">
+          <li style="display:flex;align-items:flex-start;gap:14px;">
+            <span style="color:var(--rose);font-size:1.3rem;flex-shrink:0;">✦</span>
+            <div><strong>Liso em minutos</strong><p style="color:var(--muted);font-size:14px;margin-top:4px;">Aplicação simples, rápida e sem complicação — sem precisar de profissional.</p></div>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:14px;">
+            <span style="color:var(--rose);font-size:1.3rem;flex-shrink:0;">✦</span>
+            <div><strong>Sem formol, sem ardência, sem cheiro</strong><p style="color:var(--muted);font-size:14px;margin-top:4px;">Fórmula desenvolvida para ser segura, agradável e eficaz.</p></div>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:14px;">
+            <span style="color:var(--rose);font-size:1.3rem;flex-shrink:0;">✦</span>
+            <div><strong>Não desbota, não amarela</strong><p style="color:var(--muted);font-size:14px;margin-top:4px;">Ideal para cabelos coloridos ou com procedimentos químicos anteriores.</p></div>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:14px;">
+            <span style="color:var(--rose);font-size:1.3rem;flex-shrink:0;">✦</span>
+            <div><strong>Para toda cor e tipo de cabelo</strong><p style="color:var(--muted);font-size:14px;margin-top:4px;">Seja seu cabelo loiro, preto, ondulado ou cacheado — o Hidraliso é compatível.</p></div>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:14px;">
+            <span style="color:var(--rose);font-size:1.3rem;flex-shrink:0;">✦</span>
+            <div><strong>Efeito prolongado</strong><p style="color:var(--muted);font-size:14px;margin-top:4px;">Você aplica menos vezes e economiza mais — resultado duradouro no dia a dia.</p></div>
+          </li>
+        </ul>
+        <a href="https://app.monetizze.com.br/r/AAU18368950" target="_blank" rel="noopener"
+           class="cta-pulse"
+           style="display:inline-block;margin-top:28px;background:var(--rose);color:#fff;padding:14px 36px;border-radius:10px;font-weight:700;font-size:1rem;text-decoration:none;">
+          Ver o Kit Completo →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section style="background:var(--warm);padding:72px 20px;">
+  <div style="max-width:900px;margin:0 auto;text-align:center;">
+    <div class="divider" style="margin:0 auto 20px;"></div>
+    <h2 style="font-size:2rem;font-weight:700;margin-bottom:40px;">O que muda com o Hidraliso</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;">
+      <div class="benefit-card" style="background:#fff;border-radius:14px;padding:28px 20px;text-align:center;">
+        <div style="font-size:2.2rem;margin-bottom:12px;">💆‍♀️</div>
+        <strong style="display:block;margin-bottom:8px;">Visual Renovado</strong>
+        <p style="color:var(--muted);font-size:13px;line-height:1.6;">Cabelo com aparência cuidada, alinhada e com brilho — todos os dias.</p>
+      </div>
+      <div class="benefit-card" style="background:#fff;border-radius:14px;padding:28px 20px;text-align:center;">
+        <div style="font-size:2.2rem;margin-bottom:12px;">🏠</div>
+        <strong style="display:block;margin-bottom:8px;">Praticidade em Casa</strong>
+        <p style="color:var(--muted);font-size:13px;line-height:1.6;">Sem deslocamento, sem espera, sem agenda no salão. Você decide quando aplicar.</p>
+      </div>
+      <div class="benefit-card" style="background:#fff;border-radius:14px;padding:28px 20px;text-align:center;">
+        <div style="font-size:2.2rem;margin-bottom:12px;">💰</div>
+        <strong style="display:block;margin-bottom:8px;">Economia Real</strong>
+        <p style="color:var(--muted);font-size:13px;line-height:1.6;">Reduza as visitas ao salão e o custo com procedimentos caros.</p>
+      </div>
+      <div class="benefit-card" style="background:#fff;border-radius:14px;padding:28px 20px;text-align:center;">
+        <div style="font-size:2.2rem;margin-bottom:12px;">🛡️</div>
+        <strong style="display:block;margin-bottom:8px;">Sem Química Agressiva</strong>
+        <p style="color:var(--muted);font-size:13px;line-height:1.6;">Fórmula sem formol que respeita os fios e o seu conforto durante a aplicação.</p>
+      </div>
+      <div class="benefit-card" style="background:#fff;border-radius:14px;padding:28px 20px;text-align:center;">
+        <div style="font-size:2.2rem;margin-bottom:12px;">🎨</div>
+        <strong style="display:block;margin-bottom:8px;">Para Cabelos Coloridos</strong>
+        <p style="color:var(--muted);font-size:13px;line-height:1.6;">Compatível com colorações, não interfere no tom e não danifica os fios tingidos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section style="background:var(--cream);padding:72px 20px;">
+  <div style="max-width:700px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="divider" style="margin:0 auto 20px;"></div>
+      <h2 style="font-size:2rem;font-weight:700;">Como é simples usar</h2>
+      <p style="color:var(--muted);margin-top:12px;">Sem complicação, sem mistério — veja como o processo é acessível para qualquer pessoa.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px;">
+      <div style="display:flex;align-items:flex-start;gap:18px;">
+        <div class="step-num">1</div>
+        <div>
+          <strong style="font-size:1rem;">Lave e seque os fios normalmente</strong>
+          <p style="color:var(--muted);font-size:14px;margin-top:6px;line-height:1.6;">Prepare o cabelo da forma habitual antes de começar a aplicação.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:18px;">
+        <div class="step-num">2</div>
+        <div>
+          <strong style="font-size:1rem;">Aplique o produto conforme orientação</strong>
+          <p style="color:var(--muted);font-size:14px;margin-top:6px;line-height:1.6;">Distribua uniformemente pelo cabelo seguindo o modo de uso indicado no kit.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:18px;">
+        <div class="step-num">3</div>
+        <div>
+          <strong style="font-size:1rem;">Aguarde o tempo indicado</strong>
+          <p style="color:var(--muted);font-size:14px;margin-top:6px;line-height:1.6;">O produto age nos fios enquanto você relaxa. Sem calor excessivo ou processo longo.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:18px;">
+        <div class="step-num">4</div>
+        <div>
+          <strong style="font-size:1rem;">Finalize e aproveite o resultado</strong>
+          <p style="color:var(--muted);font-size:14px;margin-top:6px;line-height:1.6;">Fios lisos, hidratados e com brilho visível já na primeira aplicação.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section style="background:var(--warm);padding:72px 20px;">
+  <div style="max-width:700px;margin:0 auto;">
+    <div class="guarantee">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:28px;">
+        <img src="https://hidraliso.com.br/wp-content/uploads/2025/03/Hidraliso-Garantia-1.png"
+             alt="Garantia Hidraliso"
+             loading="lazy"
+             style="max-width:160px;width:100%;" />
+        <div>
+          <h3 style="font-size:1.5rem;color:#fff;margin-bottom:10px;">Compra Protegida e com Garantia</h3>
+          <p style="color:rgba(255,255,255,0.82);line-height:1.7;font-size:0.95rem;">
+            O Kit Hidraliso é comercializado com garantia para que você compre com tranquilidade. Caso tenha qualquer dúvida sobre o produto, entre em contato com o suporte oficial antes da compra.
+          </p>
+          <p style="color:rgba(255,255,255,0.6);font-size:12px;margin-top:10px;">*Condições de garantia detalhadas na página oficial do produto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="background:linear-gradient(135deg,#2C1A1E,#9E3050);padding:80px 20px;text-align:center;">
+  <div style="max-width:600px;margin:0 auto;">
+    <div class="divider" style="margin:0 auto 24px;background:#F5A0B5;"></div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:2.2rem;color:#fff;margin-bottom:16px;">
+      Pronta para transformar<br/>a aparência dos seus cabelos?
+    </h2>
+    <p style="color:rgba(255,255,255,0.75);font-size:1rem;margin-bottom:36px;line-height:1.7;">
+      Acesse a página oficial do Hidraliso, conheça os detalhes do kit, veja a forma de pagamento e condições de entrega.
+    </p>
+    <a href="https://app.monetizze.com.br/r/AAU18368950" target="_blank" rel="noopener"
+       class="cta-pulse"
+       style="display:inline-block;background:var(--rose);color:#fff;padding:18px 48px;border-radius:12px;font-size:1.1rem;font-weight:700;text-decoration:none;letter-spacing:0.3px;">
+      Acessar Página Oficial do Kit →
+    </a>
+    <p style="color:rgba(255,255,255,0.4);font-size:12px;margin-top:20px;">
+      Você será redirecionado para a página oficial do produto na plataforma parceira.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1a0f11;color:rgba(255,255,255,0.45);padding:28px 20px;text-align:center;font-size:12px;line-height:1.8;">
+  <p>Este site é um canal informativo independente. Não somos representantes oficiais do produto Hidraliso.</p>
+  <p style="margin-top:6px;">Os links de compra levam à plataforma oficial de vendas. Resultados podem variar de pessoa para pessoa.</p>
+  <p style="margin-top:6px;">© 2025 · <a href="#" style="color:rgba(255,255,255,0.4);">Política de Privacidade</a> · <a href="#" style="color:rgba(255,255,255,0.4);">Termos de Uso</a></p>
+</footer>
+
+<script>
+  // Cookie banner
+  const banner = document.getElementById('cookie-banner');
+  const btn = document.getElementById('cookie-accept');
+  if (!localStorage.getItem('ck_accepted')) {
+    setTimeout(() => banner.classList.add('show'), 1200);
+  }
+  btn.addEventListener('click', () => {
+    banner.classList.remove('show');
+    localStorage.setItem('ck_accepted', '1');
+  });
+
+  // Sticky bar on scroll
+  const stickyBar = document.getElementById('stickyBar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) stickyBar.classList.add('visible');
+    else stickyBar.classList.remove('visible');
+  });
+</script>
+
+</body>
+</html>
